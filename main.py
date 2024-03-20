@@ -1,4 +1,13 @@
 #1
+fh = open('salary.txt', 'w')
+fh.write('Alex Korp,3000\n')
+fh.write('Nikita Borisenko,2000\n')
+fh.write('Sitarama Raju,1000\n')
+fh.close()
+
+fh = open('salary.txt', 'r')
+all_file = fh.read()
+
 def total_salary(path):
     total_salary = 0
     num_developers = 0
@@ -32,10 +41,21 @@ total, average = total_salary("path/to/salary_file.txt")
 if total is not None and average is not None:
     print(f"Total salary: {total}, Average salary: {average}")
 
+fh.close()
         
         
 #2
-        
+fh = open('cats.txt', 'w')
+fh.write('60b90c1c13067a15887e1ae1,Tayson,3\n')
+fh.write('60b90c2413067a15887e1ae2,Vika,1\n')
+fh.write('60b90c2e13067a15887e1ae3,Barsik,2\n')
+fh.write('60b90c3b13067a15887e1ae4,Simon,12\n')
+fh.write('60b90c4613067a15887e1ae5,Tessi,5\n')
+fh.close()
+
+fh = open('cats.txt', 'r')
+all_file = fh.read()
+
     def get_cats_info(path):
     try:
         cats_info = []
@@ -61,7 +81,8 @@ if total is not None and average is not None:
 
 cats_info = get_cats_info("cats_file.txt")
 print(cats_info)   
-        
+
+fh.close()        
         
 #3
         
